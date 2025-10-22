@@ -28,15 +28,6 @@ jobs:
       - name: Executar testes com Cypress
         run: npx cypress run
 
-      - name: Fazer upload dos relatórios do Cypress
-        if: always() # executa mesmo que os testes falhem
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-reports
-          path: |
-            cypress/videos
-            cypress/screenshots
-            cypress/reports
-
+      
           
   
